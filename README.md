@@ -16,6 +16,8 @@ An immersive background audio/video engine.
 - **Immersive Visuals**: Features a rectangle-optimized video area with holographic overlays that pulse to the beat.
 - **Volume & Track Control**: Full playback control with an integrated UI.
 
+![Celestial Synthesizer](./public/screenshots/synth.png)
+
 ### 📜 Temporal Rift (Tasks)
 Advanced task management system linked to the cloud.
 - **Gmail ID Persistence**: Your tasks are tied to your identity and stay saved no matter where you log in.
@@ -28,7 +30,7 @@ A high-performance Pomodoro timer designed for long study sessions.
 - **Cloud-Synced Streaks**: Tracks your daily study consistency using a robust "Neural Streak" system.
 - **Manual Sync Uplink**: A dedicated button to force-sync your progress with the Supabase cloud.
 
-![Celestial Synthesizer](./public/screenshots/synth.png)
+
 
 ### 🧠 Neural Link (AI Assistant)
 ### 🧠 Agnishwar.ai (Neural Link)
