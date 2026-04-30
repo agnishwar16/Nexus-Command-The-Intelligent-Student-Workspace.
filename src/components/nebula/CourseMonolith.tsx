@@ -26,16 +26,17 @@ export const CourseMonolith: React.FC<CourseMonolithProps> = ({
   // Orbit logic
   const time = useMotionValue(0);
   const lastTime = useRef(0);
+  const lastTimeRaw = useRef(0);
   
   React.useEffect(() => {
     let frame: number;
     const animate = (t: number) => {
       // Pause orbit when hovered to allow interaction
       if (!isHovered) {
-        lastTime.current += (t - (lastTime.current_raw || t)) * 0.001 * orbitSpeed;
+        lastTime.current += (t - (lastTimeRaw.current || t)) * 0.001 * orbitSpeed;
         time.set(lastTime.current + angleOffset);
       }
-      lastTime.current_raw = t;
+      lastTimeRaw.current = t;
       frame = requestAnimationFrame(animate);
     };
     frame = requestAnimationFrame(animate);
