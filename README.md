@@ -1,6 +1,6 @@
 # 🌌 Nexus Command | The Intelligent Student Workspace
 
-![Nexus Command Dashboard](./public/screenshots/dashboard.png)
+![Nexus Command Dashboard](./public/screenshots/banner.png)
 
 > **"A high-fidelity, interactive command interface for academic excellence."**
 
@@ -28,6 +28,8 @@ A high-performance Pomodoro timer designed for long study sessions.
 - **Cloud-Synced Streaks**: Tracks your daily study consistency using a robust "Neural Streak" system.
 - **Manual Sync Uplink**: A dedicated button to force-sync your progress with the Supabase cloud.
 
+![Celestial Synthesizer](./public/screenshots/synth.png)
+
 ### 🧠 Neural Link (AI Assistant)
 ### 🧠 Agnishwar.ai (Neural Link)
 A high-intelligence academic chatbot designed for deep conceptual breakdown.
@@ -35,6 +37,8 @@ A high-intelligence academic chatbot designed for deep conceptual breakdown.
 - **Stream-Output Architecture**: Real-time token streaming for a fluid, instantaneous conversational experience.
 - **Academic Contextualization**: Specializes in breaking down complex syllabi into actionable study blocks and generating dynamic schedules.
 - **Markdown Mastery**: Full support for rendering complex equations, code snippets, and formatted academic notes.
+
+![Agnishwar.ai Interface](./public/screenshots/ai.png)
 
 ### 🌀 Interactive Nebula Core
 The heart of your dashboard.
