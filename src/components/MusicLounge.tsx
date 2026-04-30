@@ -34,84 +34,8 @@ export default function MusicLounge() {
     }
   }, [session]);
 
-  // Player & Sync Initialization
-  useEffect(() => {
-    if (status !== "authenticated" || !session?.user?.accessToken) return;
 
-    // 1. Initialize Spotify SDK
-    const script = document.createElement("script");
-    script.id = "spotify-sdk";
-    script.src = "https://sdk.scdn.co/spotify-player.js";
-    script.async = true;
-    document.body.appendChild(script);
-
-    window.onSpotifyWebPlaybackSDKReady = () => {
-      const playerInstance = new window.Spotify.Player({
-        name: 'Agnishwar.ai Study Lounge',
-        getOAuthToken: (cb: any) => { cb(session.user.accessToken); },
-        volume: 0.5
-      });
-
-      setPlayer(playerInstance);
-
-      playerInstance.addListener('ready', ({ device_id }: { device_id: string }) => {
-        console.log('Spotify Ready with Device ID', device_id);
-      });
-
-      playerInstance.addListener('player_state_changed', (state: any) => {
-        if (!state) {
-          setActive(false);
-          return;
-        }
-
-        setTrack(state.track_window.current_track);
-        setPaused(state.paused);
-        setProgress(state.position);
-        setDuration(state.duration);
-        setActive(true);
-
-        // Broadcast if we are the host and not responding to a remote event
-        if (channelRef.current && !isRemoteUpdate.current) {
-          broadcastState(channelRef.current, {
-            uri: state.track_window.current_track.uri,
-            position: state.position,
-            is_paused: state.paused,
-            updatedAt: Date.now()
-          });
-        }
-        isRemoteUpdate.current = false;
-      });
-
-      playerInstance.connect();
-    };
-
-    // 2. Initialize Supabase Sync
-    try {
-      const email = session?.user?.email || "anon";
-      const roomId = email.replace(/[@.]/g, "-");
-      channelRef.current = subscribeToRoom(roomId, (payload) => {
-        if (!player) return;
-        const drift = Math.abs(payload.position - progress);
-        if (drift > 3000 || payload.is_paused !== is_paused) {
-          isRemoteUpdate.current = true;
-          if (payload.is_paused) {
-            player.pause();
-          } else {
-            player.resume();
-          }
-        }
-      });
-    } catch (e) {
-      console.warn("Sync failed to initialize (likely missing Supabase keys)", e);
-    }
-
-    return () => {
-      if (player) player.disconnect();
-      if (channelRef.current) channelRef.current.unsubscribe();
-      const s = document.getElementById("spotify-sdk");
-      if (s) s.remove();
-    };
-  }, [session, status]);
+  // Spotify removed - no longer used in this project
 
   const togglePlay = () => {
     if (player) player.togglePlay();
