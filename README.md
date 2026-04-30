@@ -1,6 +1,6 @@
 # 🌌 Nexus Command | The Intelligent Student Workspace
 
-![Nexus Command Dashboard](./public/screenshots/banner.png)
+![Nexus Command Dashboard](./public/screenshots/dashboard.png)
 
 > **"A high-fidelity, interactive command interface for academic excellence."**
 
