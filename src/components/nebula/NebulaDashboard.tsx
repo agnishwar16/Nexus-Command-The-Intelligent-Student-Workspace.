@@ -50,6 +50,7 @@ export default function NebulaDashboard({ children }: NebulaDashboardProps) {
       <NebulaBackground />
       
       <motion.div 
+        transition={{ duration: 0.5 }}
         style={{ 
           scale: smoothScale,
           x: driftX,
@@ -59,7 +60,6 @@ export default function NebulaDashboard({ children }: NebulaDashboardProps) {
           position: 'fixed',
           top: 0,
           left: 0,
-          transition: { duration: 0.5 }
         }}
       >
         {/* Central Black Hole */}
