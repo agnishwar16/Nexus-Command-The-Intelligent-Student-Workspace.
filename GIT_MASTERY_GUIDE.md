@@ -115,4 +115,36 @@ Type `git status` anytime to see what's happening. If files are **Red**, they ar
 
 ---
 
+## 7. Troubleshooting & Power User Moves 🛠️
+
+### 🔄 Fixing a Wrong Link
+If you pasted the wrong URL or have a typo:
+```bash
+git remote remove origin         # Deletes the old link
+git remote add origin NEW_URL    # Adds the correct one
+```
+
+### 🌳 The "Branch Name" Fix
+GitHub uses `main`, but your computer might use `master`. They MUST match.
+```bash
+git branch -M main               # Force-renames 'master' to 'main'
+```
+
+### 🩹 The "Oops, I messed up" (Amend)
+If you made a commit but forgot a file or included a secret key:
+1. Fix the file.
+2. `git add .`
+3. Run this:
+```bash
+git commit --amend --no-edit     # Rewrites your last commit with the fixes
+```
+
+### 🛑 GitHub Push Protection
+If GitHub blocks your push because of a "Secret," it's for your safety!
+- **Step 1**: Move the secret (API Key) to `.env.local`.
+- **Step 2**: Remove the secret from your code.
+- **Step 3**: Use the `commit --amend` trick above to "clean" your history.
+
+---
+
 *Notes by Antigravity AI — 2026*

@@ -1,6 +1,6 @@
 # 🌌 Nexus Command | The Intelligent Student Workspace
 
-![Nexus Command Banner](https://images.unsplash.com/photo-1614850523296-d8c1af93d400?q=80&w=2070&auto=format&fit=crop)
+![Nexus Command Dashboard](./public/screenshots/dashboard.png)
 
 > **"A high-fidelity, interactive command interface for academic excellence."**
 
@@ -29,9 +29,12 @@ A high-performance Pomodoro timer designed for long study sessions.
 - **Manual Sync Uplink**: A dedicated button to force-sync your progress with the Supabase cloud.
 
 ### 🧠 Neural Link (AI Assistant)
-A personal academic AI tutor integrated directly into the dashboard.
-- **Context-Aware**: Ready to help break down large assignments or generate study schedules.
-- **Markdown Support**: Renders complex academic information in a beautiful, readable format.
+### 🧠 Agnishwar.ai (Neural Link)
+A high-intelligence academic chatbot designed for deep conceptual breakdown.
+- **Multi-Model Intelligence**: Seamlessly integrated with **OpenAI (GPT-4o)**, **Google Gemini 1.5 Pro**, and **Groq (Llama 3)** for ultra-fast, high-context responses.
+- **Stream-Output Architecture**: Real-time token streaming for a fluid, instantaneous conversational experience.
+- **Academic Contextualization**: Specializes in breaking down complex syllabi into actionable study blocks and generating dynamic schedules.
+- **Markdown Mastery**: Full support for rendering complex equations, code snippets, and formatted academic notes.
 
 ### 🌀 Interactive Nebula Core
 The heart of your dashboard.
@@ -42,14 +45,15 @@ The heart of your dashboard.
 
 ## 🛠️ The Tech Stack
 
-Nexus Command is built using the most modern web technologies for maximum performance and stability:
+Nexus Command is built using a cutting-edge stack optimized for AI and 3D performance:
 
-- **Frontend**: [Next.js](https://nextjs.org/) (React 19)
-- **3D Graphics**: [Three.js](https://threejs.org/) & [React Three Fiber](https://r3f.docs.pmnd.rs/getting-started/introduction)
-- **Authentication**: [NextAuth.js](https://next-auth.js.org/) (Google/Gmail Login)
-- **Database**: [Supabase](https://supabase.com/) (PostgreSQL & Realtime)
-- **Animations**: [Framer Motion](https://www.framer.com/motion/)
-- **Icons**: [Lucide React](https://lucide.dev/)
+- **AI Engine**: [Vercel AI SDK](https://sdk.vercel.ai/) with multi-provider support (OpenAI, Google, Groq).
+- **Frontend**: [Next.js](https://nextjs.org/) (React 19) with App Router.
+- **3D Graphics**: [Three.js](https://threejs.org/) & [React Three Fiber](https://r3f.docs.pmnd.rs/getting-started/introduction).
+- **Authentication**: [NextAuth.js](https://next-auth.js.org/) (Google/Gmail Login).
+- **Database**: [Supabase](https://supabase.com/) (PostgreSQL & Realtime).
+- **Animations**: [Framer Motion](https://www.framer.com/motion/).
+- **Inference**: High-speed edge computing via Groq LPUs.
 
 ---
 
