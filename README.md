@@ -30,7 +30,7 @@ A high-performance Pomodoro timer designed for long study sessions.
 - **Cloud-Synced Streaks**: Tracks your daily study consistency using a robust "Neural Streak" system.
 - **Manual Sync Uplink**: A dedicated button to force-sync your progress with the Supabase cloud.
 
-
+![Neural Streak & Focus Flux](./public/screenshots/focus.png)
 
 ### 🧠 Neural Link (AI Assistant)
 ### 🧠 Agnishwar.ai (Neural Link)
