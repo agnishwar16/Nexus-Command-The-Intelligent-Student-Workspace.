@@ -42,7 +42,7 @@ export default function TaskList() {
           const saved = localStorage.getItem(`agnishwar_tasks_${userId}`);
           const savedTasks = saved ? JSON.parse(saved) : [];
           
-          const merged = data.map(dbTask => {
+          const merged = data.map((dbTask: any) => {
               const local = savedTasks.find((t: any) => t.id === dbTask.id);
               return { ...dbTask, progress: local?.progress || 0 };
           });
